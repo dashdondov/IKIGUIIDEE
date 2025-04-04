@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=393, height=852, initial-scale=1.0">
+    <title>Website Design</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
+        }
+
+        .homecontainer {
+            background: #fff;
+            width: 390px;
+            height: 844px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+        }
+
+        .IKIGUIDE {
+            font-weight: lighter;
+            font-size: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 5px;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+        .tab {
+            padding: 8px 15px;
+            border: 1px solid #6cae3e;
+            border-radius: 15px;
+            background-color: white;
+        }
+        .content {
+            padding: 10px;
+            flex-grow: 1;
+            
+           
+            height: 400px;
+            /* Set height */
+            overflow-y: scroll;
+            /* Allow vertical scrolling */
+            scrollbar-width: none;
+            /* Hide scrollbar in Firefox */
+        }
+        
+        .content::-webkit-scrollbar {
+            display: none;
+            /* Hide scrollbar in Chrome/Safari */
+        }
+        .card {
+            display: flex;
+            align-items: flex-start;
+            border: 1px solid #6cae3e;
+            padding: 10px;
+            border-radius: 10px;
+            margin:5px;
+            background-color: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+            position: relative;
+        }
+       
+
+
+        .card img {
+            width: 60px;
+            height: 56px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .card p {
+            flex-grow: 1;
+            margin-bottom: 30px;
+        }
+        .card .small-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #6cae3e;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .card .small-button:hover {
+            background-color: #5a9b34;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 5px 5px;
+            margin: 5px;
+        }
+
+        .nav-item {
+            flex: 1;
+            /* Makes all items take equal space */
+            text-align: center;
+            color: gray;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .nav-item img {
+            width: 30px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        button {
+            background: none;
+            border: none;
+            color: inherit;
+            /* Inherits text color from parent */
+            font: inherit;
+            /* Inherits font style */
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="homecontainer">
+        <div class="header">
+            <div class="logo">
+                <img src="C:\Users\User\Downloads\ikiguidelogo.png" alt="Logo">
+                <p class="IKIGUIDE">IKIGUIDE</p>
+            </div>
+            <button class="menu-icon">
+
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M22.5 3.75C23.8261 3.75 25.0979 4.27678 26.0355 5.21447C26.9732 6.15215 27.5 7.42392 27.5 8.75V18.75C27.5 20.0761 26.9732 21.3479 26.0355 22.2855C25.0979 23.2232 23.8261 23.75 22.5 23.75H16.595L10.6425 27.3213C10.4632 27.4288 10.2599 27.4897 10.051 27.4984C9.84208 27.507 9.63436 27.4631 9.44682 27.3707C9.25928 27.2783 9.09792 27.1404 8.97749 26.9695C8.85707 26.7986 8.78143 26.6002 8.7575 26.3925L8.75 26.25V23.75H7.5C6.2172 23.75 4.98346 23.257 4.05399 22.3728C3.12451 21.4887 2.57039 20.2812 2.50625 19L2.5 18.75V8.75C2.5 7.42392 3.02678 6.15215 3.96447 5.21447C4.90215 4.27678 6.17392 3.75 7.5 3.75H22.5ZM17.5 15H10C9.66848 15 9.35054 15.1317 9.11612 15.3661C8.8817 15.6005 8.75 15.9185 8.75 16.25C8.75 16.5815 8.8817 16.8995 9.11612 17.1339C9.35054 17.3683 9.66848 17.5 10 17.5H17.5C17.8315 17.5 18.1495 17.3683 18.3839 17.1339C18.6183 16.8995 18.75 16.5815 18.75 16.25C18.75 15.9185 18.6183 15.6005 18.3839 15.3661C18.1495 15.1317 17.8315 15 17.5 15ZM20 10H10C9.66848 10 9.35054 10.1317 9.11612 10.3661C8.8817 10.6005 8.75 10.9185 8.75 11.25C8.75 11.5815 8.8817 11.8995 9.11612 12.1339C9.35054 12.3683 9.66848 12.5 10 12.5H20C20.3315 12.5 20.6495 12.3683 20.8839 12.1339C21.1183 11.8995 21.25 11.5815 21.25 11.25C21.25 10.9185 21.1183 10.6005 20.8839 10.3661C20.6495 10.1317 20.3315 10 20 10Z"
+                        fill="#8E8E8E" />
+                </svg>
+
+
+            </button><!--END CHATBOT ICON BUTTON BOLGOJ ORUULAH-->
+        </div>
+    <div class="tabs">
+        <div class="tab">Дотоод</div>
+        <div class="tab">Ази</div>
+        <div class="tab">Америк</div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <img src="https://news.num.edu.mn/wp-content/uploads/2013/12/logo_en_web.jpg" alt="Logo">
+            <p>МУИС нь архитектурын чиглэлээр тодорхой хөтөлбөр санал болгодоггүй ч номын санд нь архитектурын талаархи судалгааны бүтээлүүд байдаг</p>
+            <a href="#" class="small-button">🔗 Visit</a>
+        </div>
+        <div class="card">
+            <img src="https://www.must.edu.mn/media/uploads/2022/08/10/image-20220810124218-2.png" alt="Logo">
+            <p>Архитектур: Суурь шинжлэх ухаан болон архитектур, хот төлөвлөлтийн мэдлэг олгох, асуудал шийдвэрлэх чадвар эзэмшүүлэх зорилготой</p>
+            <a href="#" class="small-button">🔗 Visit</a>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Y6ACbhh-_4dCYXXeJJ-Cs55c9g5vVPqgNg&s" alt="Logo">
+            <p>"Khuree Architects"-ээс захиалсан гэрэл зургийн уралдаанд үзүүлсэн зохион байгуулалтыг байна</p>
+            <a href="#" class="small-button">🔗 Visit</a>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWN-5Dca0ke-LTxvxHpQfGrcOF_bAdrDDqhyIpdpwJS8nOi_l4LkWhcpFhPR89XNVIklY&usqp=CAU" alt="Logo">
+            <p>AUS-ийн Архитектурын тэнхим нь Ойрхи Дорнод дахь эрдэм шинжилгээний шилдэг төв бөгөөд архитектур, интерьер дизайны чиглэлээр авъяас чадварыг хөгжүүлдэг.</p>
+            <a href="#" class="small-button">🔗 Visit</a>
+        </div>
+        <div class="card">
+            <img src="https://unipd-centrodirittiumani.it/storage/media/41/75/Logo_PadovaModelUpr1.jpg" alt="Logo">
+            <p>Олон их дээд сургуулиуд Ром,Токио зэрэг архитектурын төвүүдэд гадаадад суралцах хөтөлбөрүүдийг санал болгодог. Тэд нарны AIA тэмцээн зэрэг олон улсын загварын тэмцээнд оролцохыг дэмждэг.</p>
+            <a href="#" class="small-button">🔗 Visit</a>
+        </div>
+    </div>
+    <div class="bottom-nav">
+        <button class="nav-item"><a href="ikiguidehome.html">
+            
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="30" height="30" fill="white"/>
+                <path d="M5 23.75V12.5C5 12.1042 5.08875 11.7292 5.26625 11.375C5.44375 11.0208 5.68833 10.7292 6 10.5L13.5 4.875C13.9375 4.54167 14.4375 4.375 15 4.375C15.5625 4.375 16.0625 4.54167 16.5 4.875L24 10.5C24.3125 10.7292 24.5575 11.0208 24.735 11.375C24.9125 11.7292 25.0008 12.1042 25 12.5V23.75C25 24.4375 24.755 25.0263 24.265 25.5163C23.775 26.0063 23.1867 26.2508 22.5 26.25H18.75C18.3958 26.25 18.0992 26.13 17.86 25.89C17.6208 25.65 17.5008 25.3533 17.5 25V18.75C17.5 18.3958 17.38 18.0992 17.14 17.86C16.9 17.6208 16.6033 17.5008 16.25 17.5H13.75C13.3958 17.5 13.0992 17.62 12.86 17.86C12.6208 18.1 12.5008 18.3967 12.5 18.75V25C12.5 25.3542 12.38 25.6512 12.14 25.8912C11.9 26.1312 11.6033 26.2508 11.25 26.25H7.5C6.8125 26.25 6.22417 26.0054 5.735 25.5163C5.24583 25.0271 5.00083 24.4383 5 23.75Z" fill="#B9F674"/>
+                </svg>
+                
+            
+            </a>
+            <!-- Нүүр -->
+        </button>
+        <button class="nav-item"><a href="ikiguideuniversity.html">
+
+            <svg width="28" height="28" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14 0.75L0.25 8.25L14 15.75L25.25 9.6125V18.25H27.75V8.25M5.25 13.475V18.475L14 23.25L22.75 18.475V13.475L14 18.25L5.25 13.475Z"
+                    fill="#8E8E8E" />
+            </svg></a>
+
+
+             <!--Их сургууль-->
+        </button>
+        <button class="nav-item">
+
+            <a href="ikiguidebolomj.html">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.9999 21.5938L9.81242 24.7187C9.58326 24.8646 9.34367 24.9271 9.09367 24.9062C8.84367 24.8854 8.62492 24.8021 8.43742 24.6562C8.24992 24.5104 8.10409 24.3283 7.99992 24.11C7.89576 23.8917 7.87492 23.6467 7.93742 23.375L9.31242 17.4688L4.71867 13.5C4.51034 13.3125 4.38034 13.0988 4.32867 12.8587C4.27701 12.6187 4.29242 12.3846 4.37492 12.1563C4.45742 11.9279 4.58242 11.7404 4.74992 11.5938C4.91742 11.4471 5.14659 11.3533 5.43742 11.3125L11.4999 10.7812L13.8437 5.21875C13.9478 4.96875 14.1095 4.78125 14.3287 4.65625C14.5478 4.53125 14.7716 4.46875 14.9999 4.46875C15.2283 4.46875 15.452 4.53125 15.6712 4.65625C15.8903 4.78125 16.052 4.96875 16.1562 5.21875L18.4999 10.7812L24.5624 11.3125C24.8541 11.3542 25.0833 11.4479 25.2499 11.5938C25.4166 11.7396 25.5416 11.9271 25.6249 12.1563C25.7083 12.3854 25.7241 12.62 25.6724 12.86C25.6208 13.1 25.4903 13.3133 25.2812 13.5L20.6874 17.4688L22.0624 23.375C22.1249 23.6458 22.1041 23.8908 21.9999 24.11C21.8958 24.3292 21.7499 24.5112 21.5624 24.6562C21.3749 24.8013 21.1562 24.8846 20.9062 24.9062C20.6562 24.9279 20.4166 24.8654 20.1874 24.7187L14.9999 21.5938Z"
+                        fill="#8E8E8E" />
+                </svg></a>
+
+
+            <!--Боломж-->
+        </button>
+        <button class="nav-item"><a href="ikiguidementor.html">
+
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10.8837 24.6338L22.5 13.0175L16.9825 7.50003L5.36625 19.1163C5.20618 19.2763 5.09255 19.4768 5.0375 19.6963L3.75 26.25L10.3025 24.9625C10.5225 24.9075 10.7237 24.7938 10.8837 24.6338ZM26.25 9.26753C26.7187 8.79871 26.982 8.16294 26.982 7.50003C26.982 6.83712 26.7187 6.20135 26.25 5.73253L24.2675 3.75003C23.7987 3.28135 23.1629 3.01807 22.5 3.01807C21.8371 3.01807 21.2013 3.28135 20.7325 3.75003L18.75 5.73253L24.2675 11.25L26.25 9.26753Z"
+                    fill="#8E8E8E" />
+            </svg> </a><!--Ментор-->
+           
+        </button>
+        <button class="nav-item"><a href="ikiguideprofile.html">
+
+            <svg width="24" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M12.5 12.5C10.7812 12.5 9.30989 11.888 8.08594 10.6641C6.86198 9.4401 6.25 7.96875 6.25 6.25C6.25 4.53125 6.86198 3.0599 8.08594 1.83594C9.30989 0.611979 10.7812 0 12.5 0C14.2187 0 15.6901 0.611979 16.9141 1.83594C18.138 3.0599 18.75 4.53125 18.75 6.25C18.75 7.96875 18.138 9.4401 16.9141 10.6641C15.6901 11.888 14.2187 12.5 12.5 12.5ZM0 25V20.625C0 19.7396 0.228125 18.926 0.684375 18.1844C1.14063 17.4427 1.74583 16.876 2.5 16.4844C4.11458 15.6771 5.75521 15.0719 7.42187 14.6687C9.08854 14.2656 10.7812 14.0635 12.5 14.0625C14.2187 14.0615 15.9115 14.2635 17.5781 14.6687C19.2448 15.074 20.8854 15.6792 22.5 16.4844C23.2552 16.875 23.8609 17.4417 24.3172 18.1844C24.7734 18.9271 25.001 19.7406 25 20.625V25H0Z"
+                    fill="#8E8E8E" />
+            </svg></a>
+            <!--Профайл-->
+        </button>
+    </div>
+</div>
+</body>
+</html>
